@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  scheduled-jobs:
+    image: ghcr.io/pokedex-gamba/scheduled-jobs
+    build: .
+    networks:
+      # Needed for scripts
+      - pokedex-gamba-net
+
+networks:
+  pokedex-gamba-net:
+    #external: true
+    name: pokedex-gamba-net
